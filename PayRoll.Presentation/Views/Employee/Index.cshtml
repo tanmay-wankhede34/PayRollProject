@@ -1,16 +1,17 @@
 ﻿@using PayRoll.Presentation.ViewModels
 
 @model List<EmployeeListViewModel>
-<a class="btn btn-info" asp-action="Create" asp-controller="Student">Create!</a>
+<a class="btn btn-info" asp-action="Create" asp-controller="Employee">Create!</a>
 <table class="table table-striped">
     <thead>
         <tr>
 
-            <th>
-                Id
-            </th>
+           
             <th>
                 EmployeeNumber
+            </th>
+            <th>
+                ImageURL
             </th>
             <th>
                 FullName
@@ -19,39 +20,17 @@
                 Gender
             </th>
             <th>
-                ImageURL
-            </th>
-            <th>
-                DateOfBirth
-            </th>
-            <th>
-                DateOfJoined
-            </th>
-            <th>
-                PhoneNumber
-            </th>
-            <th>
-                Email
-            </th>
-            <th>
-                Address
+                Designation
             </th>
             <th>
                 City
             </th>
+            
+           
             <th>
-                PostalCode
+                DateOfJoined
             </th>
-            <th>
-                Designation
-            </th>
-            <th>
-                PaymentMethod
-            </th>
-            <th>
-                StudentLoan
-            </th>
-
+           
             <th>
                 Action
             </th>
@@ -63,12 +42,12 @@
             <tr>
 
 
-                <td>
-
-                @item.Id
-                </td>
+               
                 <td>
                     @item.EmployeeNumber
+                </td>
+                <td>
+                    <img src="@item.ImageURL" height="60px" width="80px" />
                 </td>
                 <td>
                     @item.FullName
@@ -77,42 +56,16 @@
                     @item.Gender
                 </td>
                 <td>
-                    @item.ImageURL
-                </td>
-                <td>
-                    @item.DateOfBirth
-                </td>
-                <td>
-                    @item.DateOfJoined
-                </td>
-                <td>
-                    @item.PhoneNumber
-                </td>
-                <td>
-                    @item.Email
-                </td>
-                <td>
-                    @item.Address
+                    @item.Designation
                 </td>
                 <td>
                     @item.City
                 </td>
-
+                
                 <td>
-                    @item.PostalCode
+                    @item.DateOfJoined
                 </td>
-                <td>
-                    @item.Designation
-                </td>
-                <td>
-                    @item.DateOfBirth
-                </td>
-                <td>
-                    @item.PaymentMethod
-                </td>
-                <td>
-                    @item.StudentLoan
-                </td>
+               
                 <td>
                     <a class="btn btn-info me-1" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
                     <a class="btn btn-danger me-1" asp-action="Delete" asp-route-id="@item.Id">Delete</a>

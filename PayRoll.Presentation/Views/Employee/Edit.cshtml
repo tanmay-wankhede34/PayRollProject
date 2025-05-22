@@ -2,11 +2,11 @@
 @using PayRoll.Presentation.ViewModels
 
 
-@model CreateEmployeeViewModel
+@model EditEmployeeViewModel
 
 <div class="container">
 
-    <form asp-action="Create" method="post">
+    <form asp-action="Edit" method="post">
 
         <div class="row">
 
@@ -58,7 +58,7 @@
             <div class="mt-1">
 
                 <label for="Address">Address</label>
-                <textarea asp-for="Address" class="form-control" />
+                <textarea asp-for="Address" class="form-control" ></textarea>
             </div>
             <div class="mt-1">
 
